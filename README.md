@@ -1,13 +1,13 @@
 ###### Sorry for the hungarian only text! This project is made for Hungarian programmer students to let them learn something useful, so I don't think it's a must to provide the English version, too. And sorry for my poor English! :-)
 
-# calculator
-Egyszerű számológép alkalmazás, sok felesleges(nek tűnő) kiegészítéssel.
+# contacts
+Egyszerű címtár alkalmazás, sok felesleges(nek tűnő) kiegészítéssel.
 
 ## Mi is ez?
 
-Alapjában véve egy sima négyműveletes számológépnek indul a projekt. Viszont az összes elérendő cél megvalósítása miatt valószínűleg ennél több "tudása" lesz a végére, és biztosan lesznek olyan részei amit álmotokban sem gondolnátok bele egy számológépbe.
+Alapjában véve egy sima címtárnak (névjegy tárnak) indul a projekt. Viszont az összes elérendő cél megvalósítása miatt valószínűleg ennél nagyobb "tudása" lesz a végére, és biztosan lesznek olyan részei amit álmotokban sem gondolnátok bele egy névjegyzékbe.
 
-Persze sokkal kézenfekvőbb lenne egy névjegyzéket, szakácskönyvet, to-do listát vagy hasonlót csinálni adatbázisos vonalon... Remélem lesznek olyanok köztetek, aki ilyeneket készítenek az itt található források felhasználásával beadandónak!
+Persze sokkal kézenfekvőbb lenne egy szakácskönyvet, to-do listát vagy hasonlót csinálni adatbázisos vonalon... Remélem lesznek olyanok köztetek, akik ilyeneket készítenek az itt található források felhasználásával beadandónak!
 
 Ezt a projektet kifejezetten az [EKF](http://uni-eger.hu/) 2015/16 tanévében másodéves PTI szakos hallgatók kedvéért készítem. Több kurzusra is kell beadandó szoftvert készítenünk, amikkel szemben különböző elvárásokat, követelményeket állítottak az oktatók.
 
@@ -20,7 +20,7 @@ Ha elvi/alapjaiban hibás bármelyik része, esetleg profibb módszer/megvalós�
 
 Azért döntöttem ezen publikus repó létrehozása mellett, mert sok tanácstalan arcot láttam az előadásokon a beadandókkal kapcsolatos elvárások sorolása közben.
 
-Ezen felül némiképp elkeserít, hogy mennyire nem része a tananyagnak sok olyan témakör, ami a való életben hasznos lehetne egy kezdő (vagy akár haladó) programozónak. Ellenben tanulunk rengeteg olyan (jellemzően elméleti) anyagot, ami szép-jó és valóban illik ismerni, csak igazából soha sehová nem fog kelleni. Túl kevés az óraszám, és ennek túl nagy részét viszi el az ilyen (szerintem) haszontalan anyag. Pontosítok: nem haszontalan, csak mellettük nem marad idő valóban hasznos tudás átadására.
+Ezen felül némiképp elkeserít, hogy mennyire nem része a tananyagnak sok olyan témakör, ami a való életben hasznos lehetne egy kezdő (vagy akár haladó) programozónak. Ellenben tanulunk rengeteg olyan (jellemzően elméleti) anyagot, ami szép-jó és valóban illik ismerni, csak igazából soha sehová nem fog kelleni. Túl kevés az óraszám, és ennek túl nagy részét viszi el az ilyen (szerintem) haszontalan anyag. Pontosítok: nem haszontalan, csak mellettük nem marad idő valóban hasznos tudás átadására. A felsőoktatás az én meglátásom szerint nem a munkaerőpiacra "termel" diplomásokat, hanem a KSH statisztikába jelen formájában.
 
 Szóval remélem ebből a projektből egy pár olyan dolgot is megtanulhatunk közösen, amire az iskolában nem jut idő.
 
@@ -28,15 +28,22 @@ Szóval remélem ebből a projektből egy pár olyan dolgot is megtanulhatunk k�
 
 A projektben a következőket tervezem megvalósítani, remélem mindet sikerül:
 - Fejlesztési koncepciók
-  * [x] Verzió kezelő rendszer (Source version control), Git haszálata (a GitHub-on vagyunk, így ez már sikerült is :-)
-  * [ ] Tesztvezérelt fejleszési modell (TDD - Test Driven Development) használata
-- Megvalósítandó célok
+  * [x] Verzió kezelő rendszer (source version control): Git haszálata (a GitHub-on vagyunk, így ez már sikerült is :-)
+  * [ ] Tesztvezérelt fejleszési modell (TDD - Test Driven Development) alkalmazása
+  * [ ] Microsoft Entiry Framework (EF) használata az objektum-adatbázis leképzéshez (O/RM - Object/Relational Model)
+  * [ ] Microsoft LINQ használata az adatbázis elérés uniformizálására
+  * [ ] Tárolt eljárások mellőzése a teljes RDBMS függetlenség érdekében
+  * [ ] Firebird RDBMS használata (beágyazott szerver + univerzális kliens: külön telepített szerver nélkül is működőképes kód)
   * [ ] Több tervezési minta (design pattern) használata
-  * [ ] Adatbázis kezelés
-  * [ ] Dokumentációs (`///`) megjegyzések
-  * [ ] Log-olás
-  * [ ] Grafikus felhasználói felület (WPF lesz)
-  * [ ] GUI és "üzleti" logika elkülönítése
+  * [ ] Multi-tier kialakítás (adatbázis szerver - business logic - kliensek)
+- Megvalósítandó célok
+  * [ ] A "business logic" egy webservice lesz (SOAP vagy REST), amely az adatbázist kezeli, a kliensek kéréseit fogadja (beágyazott DB szerverrel a telepítés egyszerűsítése érdekében), és végrehajtja
+  * [ ] Legalább kétféle kliens megvalósítása (Windows-os "vastag" kliens WPF-el és webes kliens HTML5+JS alapokon)
+  * [ ] Adatbázis kezelés használata
+  * [ ] Dokumentációs (`///`) megjegyzések (ahol ennek értelme van)
+  * [ ] Log-olás (naplózás) valami értelmes módon, lehetőleg többféle kimenet opciójával
+  * [ ] Grafikus felhasználói felület (WPF és web lesz)
+  * [ ] GUI és "üzleti" logika elkülönítése (ez a multi-tier miatt evidens)
   * [ ] WOW effektus (még nem tudom ezt mi adja majd...)
 
 ## Ki használhatja?
